@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-victor-henrique",
+  "version": "1.0.0",
+  "description": "Portfólio pessoal de Victor Henrique Santana de Souza",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "nodejs",
+    "express",
+    "desenvolvedor"
+  ],
+  "author": "Victor Henrique Santana de Souza",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
