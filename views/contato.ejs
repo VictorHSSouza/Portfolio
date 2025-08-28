@@ -1,0 +1,111 @@
+<!-- Contato Section -->
+<section class="py-5 mt-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold text-center mb-5">Entre em Contato</h1>
+
+        <% if (message) { %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="fas fa-check-circle me-2"></i>
+                <%= message %>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            <% } %>
+
+                <div class="row">
+                    <!-- Formulário -->
+                    <div class="col-lg-8 mb-5">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3 class="card-title mb-4">Envie uma Mensagem</h3>
+                                <form method="POST" action="/contato">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="nome" class="form-label">Nome *</label>
+                                            <input type="text" class="form-control" id="nome" name="nome" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">Email *</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="assunto" class="form-label">Assunto *</label>
+                                        <input type="text" class="form-control" id="assunto" name="assunto" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="mensagem" class="form-label">Mensagem *</label>
+                                        <textarea class="form-control" id="mensagem" name="mensagem" rows="5"
+                                            required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>Enviar Mensagem
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Informações de Contato -->
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3 class="card-title mb-4">Informações de Contato</h3>
+
+                                <div class="contact-info mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-envelope fa-2x text-primary me-3"></i>
+                                        <div>
+                                            <h6 class="mb-0">Email</h6>
+                                            <small class="text-muted">
+                                                <%= data.contato.email %>
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-phone fa-2x text-primary me-3"></i>
+                                        <div>
+                                            <h6 class="mb-0">Telefone</h6>
+                                            <small class="text-muted">
+                                                <%= data.contato.telefone %>
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fab fa-linkedin fa-2x text-primary me-3"></i>
+                                        <div>
+                                            <h6 class="mb-0">LinkedIn</h6>
+                                            <small class="text-muted">
+                                                <%= data.contato.linkedin %>
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center">
+                                        <i class="fab fa-github fa-2x text-primary me-3"></i>
+                                        <div>
+                                            <h6 class="mb-0">GitHub</h6>
+                                            <small class="text-muted">
+                                                <%= data.contato.github %>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid gap-2">
+                                    <a href="https://<%= data.contato.linkedin %>" target="_blank"
+                                        class="btn btn-outline-primary">
+                                        <i class="fab fa-linkedin me-2"></i>LinkedIn
+                                    </a>
+                                    <a href="https://<%= data.contato.github %>" target="_blank"
+                                        class="btn btn-outline-dark">
+                                        <i class="fab fa-github me-2"></i>GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+</section>

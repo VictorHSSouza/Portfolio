@@ -16,8 +16,10 @@
   "author": "Victor Henrique Santana de Souza",
   "license": "MIT",
   "dependencies": {
+    "axios": "^1.11.0",
     "ejs": "^3.1.10",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "express-ejs-layouts": "^2.5.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
