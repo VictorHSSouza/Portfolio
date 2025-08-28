@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfólio - Victor Henrique Santana de Souza
 
 Portfólio pessoal desenvolvido em Node.js com Express e EJS.
@@ -93,3 +94,6 @@ O portfólio é totalmente responsivo e se adapta a diferentes tamanhos de tela:
 ---
 
 Desenvolvido por **Victor Henrique Santana de Souza** 🚀
+=======
+# Portfolio
+>>>>>>> fc5716eac1c26b0045b7e36086d43afddb95c6a3
