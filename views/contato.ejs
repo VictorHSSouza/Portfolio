@@ -4,8 +4,8 @@
         <h1 class="display-4 fw-bold text-center mb-5">Entre em Contato</h1>
 
         <% if (message) { %>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <i class="fas fa-check-circle me-2"></i>
+            <div class="alert <%= messageType === 'error' ? 'alert-danger' : 'alert-success' %> alert-dismissible fade show" role="alert">
+                <i class="fas <%= messageType === 'error' ? 'fa-exclamation-circle' : 'fa-check-circle' %> me-2"></i>
                 <%= message %>
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>

@@ -79,3 +79,30 @@ window.addEventListener('load', () => {
         typeWriter(titleElement, originalText, 150);
     }
 });
+
+// Controle do tema escuro/claro
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+    
+    // Verificar tema salvo
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeIcon.className = 'fas fa-sun';
+    }
+    
+    // Alternar tema
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            themeIcon.className = 'fas fa-sun';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            themeIcon.className = 'fas fa-moon';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});

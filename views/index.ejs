@@ -1,186 +1,177 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= data.nome %> - Portfólio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-3">
-        <div class="container">
-            <a class="navbar-brand" href="#home"><%= data.nome %></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse py-2" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#educacao">Educação</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contato">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold text-white mb-3">Olá, eu sou<br><span class="text-primary"><%= data.nome_completo %></span></h1>
-                    <h2 class="h3 text-light mb-4"><%= data.titulo %></h2>
-                    <p class="lead text-light mb-4">Transformando ideias em soluções digitais inovadoras</p>
-                    <div class="d-flex gap-3 new-justify">
-                        <a href="#projetos" class="btn btn-primary btn-lg">Ver Projetos</a>
-                        <a href="/contato" class="btn btn-outline-light btn-lg">Contato</a>
-                    </div>
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-white mb-3">Olá, eu sou<br><span class="text-primary">
+                        <%= data.nome_completo %>
+                    </span></h1>
+                <h2 class="h3 text-light mb-4">
+                    <%= data.titulo %>
+                </h2>
+                <p class="lead text-light mb-4">Transformando ideias em soluções digitais inovadoras</p>
+                <div class="d-flex gap-3 new-justify">
+                    <a href="#projetos" class="btn btn-primary btn-lg">Ver Projetos</a>
+                    <a href="/contato" class="btn btn-outline-light btn-lg">Contato</a>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <div class="hero-image">
-                        <i class="fas fa-code fa-10x text-primary"></i>
-                    </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="hero-image">
+                    <i class="fas fa-code fa-10x text-primary"></i>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Sobre -->
-    <section id="sobre" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-title">Sobre Mim</h2>
-                    <p class="lead"><%= data.sobre %></p>
-                </div>
+<!-- Sobre -->
+<section id="sobre" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-title">Sobre Mim</h2>
+                <p class="lead">
+                    <%= data.sobre %>
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Habilidades -->
-    <section id="habilidades" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Habilidades</h2>
-            <div class="row">
-                <% data.habilidades.forEach(habilidade => { %>
+<!-- Habilidades -->
+<section id="habilidades" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Habilidades</h2>
+        <div class="row">
+            <% data.habilidades.forEach(habilidade=> { %>
                 <div class="col-md-3 col-sm-6 mb-3">
                     <div class="skill-card text-center p-3">
                         <i class="fas fa-code text-primary mb-2"></i>
-                        <h5><%= habilidade %></h5>
+                        <h5>
+                            <%= habilidade %>
+                        </h5>
                     </div>
                 </div>
                 <% }); %>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Projetos -->
-    <section id="projetos" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Projetos</h2>
-            <div class="row">
-                <% data.projetos.forEach(projeto => { %>
+<!-- Projetos -->
+<section id="projetos" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Projetos</h2>
+        <div class="row">
+            <% data.projetos.forEach(projeto=> { %>
                 <div class="col-lg-4 mb-4">
                     <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title"><%= projeto.nome %></h5>
-                            <p class="card-text"><%= projeto.descricao %></p>
-                            <div class="mb-3">
-                                <% projeto.tecnologias.forEach(tech => { %>
-                                <span class="badge bg-primary me-1"><%= tech %></span>
-                                <% }); %>
-                            </div>
-                            <% if (projeto.url) { %>
-                            <a href="<%= projeto.url %>" target="_blank" class="btn btn-outline-primary btn-sm">
-                                <i class="fab fa-github"></i> Ver no GitHub
-                            </a>
-                            <% } %>
-                        </div>
-                    </div>
-                </div>
-                <% }); %>
-            </div>
-        </div>
-    </section>
-
-    <!-- Educação -->
-    <section id="educacao" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Educação</h2>
-            <div class="row">
-                <% data.educacao.forEach(edu => { %>
-                <div class="col-lg-6 mb-4">
-                    <div class="card education-card">
-                        <div class="card-body">
-                            <h5 class="card-title"><%= edu.curso %></h5>
-                            <h6 class="card-subtitle mb-2 text-muted"><%= edu.instituicao %></h6>
+                        <div class="card-body d-flex justify-content-between flex-column">
+                            <h5 class="card-title">
+                                <%= projeto.nome %>
+                            </h5>
                             <p class="card-text">
-                                <span class="badge bg-success"><%= edu.status %></span>
-                                <span class="text-muted ms-2"><%= edu.ano %></span>
-                            </p>    
+                                <%= projeto.descricao %>
+                            </p>
+                            <div>
+                                <div class="mb-3">
+                                    <% projeto.tecnologias.forEach(tech=> { %>
+                                        <span class="badge bg-primary me-1">
+                                            <%= tech %>
+                                        </span>
+                                        <% }); %>
+                                </div>
+                                <% if (projeto.url) { %>
+                                    <a href="<%= projeto.url %>" target="_blank" class="btn btn-outline-primary btn-sm">
+                                        <i class="fab fa-github"></i> Ver no GitHub
+                                    </a>
+                                    <% } %>
+                            </div>
+
                         </div>
                     </div>
                 </div>
                 <% }); %>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contato -->
-    <section id="contato" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Contato</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="contact-item text-center">
-                                <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
-                                <h5>Email</h5>
-                                <p><%= data.contato.email %></p>
-                            </div>
+<!-- Educação -->
+<section id="educacao" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Educação</h2>
+        <div class="row">
+            <% data.educacao.forEach(edu=> { %>
+                <div class="col-lg-6 mb-4">
+                    <div class="card education-card <%= edu.status === 'Cursando' ? 'border-warning' : 'border-success' %>">
+                        <div class="card-body <%= edu.status === 'Cursando' ? 'bg-warning bg-opacity-10' : 'bg-success bg-opacity-10' %>">
+                            <h5 class="card-title">
+                                <%= edu.curso %>
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <%= edu.instituicao %>
+                            </h6>
+                            <p class="card-text">
+                                <span class="badge <%= edu.status === 'Cursando' ? 'bg-warning' : 'bg-success' %>">
+                                    <%= edu.status %>
+                                </span>
+                                <span class="text-muted ms-2">
+                                    <%= edu.ano %>
+                                </span>
+                            </p>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="contact-item text-center">
-                                <i class="fas fa-phone fa-2x text-primary mb-3"></i>
-                                <h5>Telefone</h5>
-                                <p><%= data.contato.telefone %></p>
-                            </div>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+</section>
+
+<!-- Contato -->
+<section id="contato" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Contato</h2>
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="contact-item text-center">
+                            <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                            <h5>Email</h5>
+                            <p>
+                                <%= data.contato.email %>
+                            </p>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="contact-item text-center">
-                                <i class="fab fa-linkedin fa-2x text-primary mb-3"></i>
-                                <h5>LinkedIn</h5>
-                                <p><%= data.contato.linkedin %></p>
-                            </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="contact-item text-center">
+                            <i class="fas fa-phone fa-2x text-primary mb-3"></i>
+                            <h5>Telefone</h5>
+                            <p>
+                                <%= data.contato.telefone %>
+                            </p>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="contact-item text-center">
-                                <i class="fab fa-github fa-2x text-primary mb-3"></i>
-                                <h5>GitHub</h5>
-                                <p><%= data.contato.github %></p>
-                            </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="contact-item text-center">
+                            <i class="fab fa-linkedin fa-2x text-primary mb-3"></i>
+                            <h5>LinkedIn</h5>
+                            <p>
+                                <%= data.contato.linkedin %>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="contact-item text-center">
+                            <i class="fab fa-github fa-2x text-primary mb-3"></i>
+                            <h5>GitHub</h5>
+                            <p>
+                                <%= data.contato.github %>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p>&copy; 2024 <%= data.nome_completo %>. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/script.js"></script>
-</body>
-</html>

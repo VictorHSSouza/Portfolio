@@ -1,99 +1,106 @@
 <<<<<<< HEAD
-# Portfólio - Victor Henrique Santana de Souza
+# 🚀 Portfólio Pessoal - Victor Henrique
 
-Portfólio pessoal desenvolvido em Node.js com Express e EJS.
+Portfólio web responsivo desenvolvido com Node.js, Express e EJS, apresentando informações profissionais, projetos e habilidades técnicas.
 
-## 🚀 Tecnologias Utilizadas
+## ✨ Funcionalidades
 
-- **Node.js** - Runtime JavaScript
-- **Express.js** - Framework web
-- **EJS** - Template engine
-- **Bootstrap 5** - Framework CSS
-- **Font Awesome** - Ícones
-- **CSS3** - Estilização personalizada
-- **JavaScript** - Interatividade
+- **Design Responsivo** - Adaptável a todos os dispositivos
+- **Modo Escuro/Claro** - Alternância de temas com persistência
+- **Integração GitHub API** - Exibe projetos automaticamente
+- **Formulário de Contato** - Sistema de envio de emails funcional
+- **Navegação Suave** - Experiência de usuário otimizada
+- **Animações CSS** - Interface moderna e interativa
+- **Efeito de Digitação** - Animação no título principal
 
-## 📋 Funcionalidades
+## 🛠️ Tecnologias
 
-- ✅ Design responsivo
-- ✅ Navegação suave entre seções
-- ✅ Animações CSS
-- ✅ Efeito de digitação no título
-- ✅ Cards interativos
-- ✅ Seções organizadas (Sobre, Habilidades, Projetos, Educação, Contato)
+- **Backend:** Node.js, Express.js
+- **Frontend:** EJS, Bootstrap 5, CSS3, JavaScript
+- **APIs:** GitHub REST API, Nodemailer
+- **Deploy:** Vercel
+- **Autenticação:** GitHub Token, Gmail App Password
 
-## 🛠️ Como executar
+## 🚀 Como Executar
 
-### Pré-requisitos
-- Node.js instalado
-
-### Instalação
-
-1. Clone o repositório ou baixe os arquivos
-2. Instale as dependências:
 ```bash
+# Clone o repositório
+git clone https://github.com/VictorHSSouza/Portfolio.git
+
+# Instale as dependências
 npm install
-```
 
-3. Execute o servidor:
-```bash
+# Configure as variáveis de ambiente (.env)
+EMAIL_USER=seu-email@gmail.com
+EMAIL_PASS=sua-senha-de-app
+GITHUB_TOKEN=seu-token-github
+
+# Execute o servidor
 npm start
-```
 
-4. Para desenvolvimento com auto-reload:
-```bash
+# Para desenvolvimento
 npm run dev
 ```
 
-5. Acesse no navegador: `http://localhost:3000`
+Acesse: `http://localhost:3000`
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura
 
 ```
 portfolio/
 ├── public/
-│   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── script.js
+│   ├── css/style.css     # Estilos e modo escuro
+│   └── js/script.js      # Interatividade e temas
 ├── views/
-│   └── index.ejs
-├── server.js
-├── package.json
-└── README.md
+│   ├── partials/         # Componentes reutilizáveis
+│   ├── index.ejs         # Página inicial
+│   ├── sobre.ejs         # Página sobre
+│   ├── projetos.ejs      # Página de projetos
+│   ├── contato.ejs       # Página de contato
+│   └── layout.ejs        # Layout principal
+├── server.js             # Servidor principal
+├── vercel.json           # Configuração deploy
+├── .env                  # Variáveis de ambiente
+└── package.json          # Dependências
 ```
+
+## ⚙️ Configuração
+
+### GitHub Token
+1. Acesse [github.com/settings/tokens](https://github.com/settings/tokens)
+2. Gere um token com permissão `public_repo`
+3. Adicione no `.env`: `GITHUB_TOKEN=seu-token`
+
+### Email (Gmail)
+1. Ative verificação em 2 etapas
+2. Gere senha de app em Configurações > Segurança
+3. Adicione no `.env`: `EMAIL_PASS=sua-senha-app`
+
+## 🌐 Deploy
+
+Configurado para deploy automático no Vercel:
+- Push para `main` → Deploy automático
+- Variáveis de ambiente configuradas no painel Vercel
+- Domínio personalizado disponível
 
 ## 🎨 Personalização
 
-Para personalizar o portfólio, edite o objeto `portfolioData` no arquivo `server.js`:
+Edite o objeto `portfolioData` em `server.js`:
+- Informações pessoais
+- Habilidades técnicas
+- Formação acadêmica
+- Dados de contato
 
-- **nome**: Seu nome completo
-- **titulo**: Sua profissão/cargo
-- **sobre**: Descrição pessoal
-- **habilidades**: Array com suas habilidades técnicas
-- **projetos**: Array com seus projetos (nome, descrição, tecnologias)
-- **educacao**: Array com sua formação acadêmica
-- **contato**: Suas informações de contato
+## 📱 Páginas
 
-## 📱 Responsividade
-
-O portfólio é totalmente responsivo e se adapta a diferentes tamanhos de tela:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (até 767px)
-
-## 🎯 Seções
-
-1. **Hero** - Apresentação inicial com call-to-action
-2. **Sobre** - Descrição pessoal e profissional
-3. **Habilidades** - Tecnologias e competências
-4. **Projetos** - Portfólio de trabalhos realizados
-5. **Educação** - Formação acadêmica
-6. **Contato** - Informações para contato
+- **/** - Página inicial com todas as seções
+- **/sobre** - Informações detalhadas e formação
+- **/projetos** - Portfólio completo de projetos
+- **/contato** - Formulário de contato funcional
 
 ---
 
-Desenvolvido por **Victor Henrique Santana de Souza** 🚀
+**Desenvolvido por Victor Henrique Santana de Souza** 💻
 =======
 # Portfolio
 >>>>>>> fc5716eac1c26b0045b7e36086d43afddb95c6a3

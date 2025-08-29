@@ -8,10 +8,15 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link <%= activePage === 'home' ? 'active' : '' %>" href="/">Início</a></li>
                 <li class="nav-item"><a class="nav-link <%= activePage === 'sobre' ? 'active' : '' %>" href="/sobre">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#habilidades">Habilidades</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#projetos">Projetos</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#educacao">Educação</a></li>
+                <li class="nav-item"><a class="nav-link" href="/sobre#habilidades">Habilidades</a></li>
+                <li class="nav-item"><a class="nav-link <%= activePage === 'projetos' ? 'active' : '' %>" href="/projetos">Projetos</a></li>
+                <li class="nav-item"><a class="nav-link" href="/sobre#educacao">Educação</a></li>
                 <li class="nav-item"><a class="nav-link <%= activePage === 'contato' ? 'active' : '' %>" href="/contato">Contato</a></li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-light btn-sm ms-2" id="themeToggle">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </div>

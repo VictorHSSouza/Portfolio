@@ -9,6 +9,93 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .bg-light {
+    background-color: #2d2d2d !important;
+}
+
+body.dark-mode .text-muted {
+    color: #b0b0b0 !important;
+}
+
+body.dark-mode .card {
+    background-color: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .education-card {
+    background-color: #2d2d2d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+}
+
+body.dark-mode .skill-card:hover,
+body.dark-mode .project-card:hover,
+body.dark-mode .education-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .contact-item {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card-title,
+body.dark-mode .card-text {
+    color: #e0e0e0;
+}
+
+body.dark-mode .card-subtitle {
+    color: #b0b0b0 !important;
+}
+
+body.dark-mode .navbar-dark {
+    background-color: #1a1a1a !important;
+}
+
+body.dark-mode .form-control {
+    background-color: #2d2d2d;
+    border-color: #404040;
+    color: #e0e0e0;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #2d2d2d;
+    border-color: #007bff;
+    color: #e0e0e0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+body.dark-mode .form-label {
+    color: #e0e0e0;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #888;
+}
+
+body.dark-mode textarea.form-control {
+    background-color: #2d2d2d;
+    border-color: #404040;
+    color: #e0e0e0;
+}
+
+body.dark-mode .contact-info h6 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .contact-info small {
+    color: #b0b0b0 !important;
 }
 
 /* Hero Section */
@@ -161,6 +248,11 @@ body {
     border-radius: 15px;
 }
 
+textarea{
+    min-height: 20px;
+    max-height: 400px;
+}
+
 /* Responsividade */
 @media (max-width: 992px) {
     .hero-section {
@@ -195,4 +287,47 @@ html {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Estilos adicionais para modo escuro */
+body.dark-mode .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+body.dark-mode .btn-outline-dark {
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+body.dark-mode .btn-outline-dark:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+body.dark-mode .alert-success {
+    background-color: #1e4d3a;
+    border-color: #28a745;
+    color: #d4edda;
+}
+
+body.dark-mode .alert-danger {
+    background-color: #4d1e1e;
+    border-color: #dc3545;
+    color: #f8d7da;
+}
+
+#themeToggle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
