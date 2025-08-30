@@ -20,7 +20,7 @@ const portfolioData = {
   nome: 'Victor Henrique',
   nome_completo: 'Victor Henrique Santana de Souza',
   titulo: 'Desenvolvedor Full Stack',
-  sobre: 'Desenvolvedor recém-formado no curso técnico do Colégio Cotemig, atualmente cursando Análise e Desenvolvimento de Sistemas na faculdade Cotemig. Apaixonado por tecnologia e sempre em busca de novos desafios.',
+  sobre: 'Sou apaixonado por tecnologia e sempre busco transformar ideias em soluções práticas. Tenho formação técnica em Informática pelo Colégio Cotemig e atualmente curso Análise e Desenvolvimento de Sistemas na Faculdade Cotemig. Já tive experiências em projetos acadêmicos e práticos que envolveram desenvolvimento de sistemas, bancos de dados e infraestrutura. Meu objetivo é evoluir constantemente como profissional de TI e contribuir em projetos que gerem impacto real para pessoas e empresas.',
   habilidades: [
     'JavaScript', 'Node.js', 'HTML5', 'CSS3', 'C#', 'Blazor',
     'ASP.NET', 'MySQL', 'Git', 'Bootstrap', 'PHP', 'Laravel'
