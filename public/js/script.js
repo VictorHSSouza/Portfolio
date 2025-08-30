@@ -16,7 +16,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section');
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
-    
+
     function type() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
@@ -75,7 +75,7 @@ function typeWriter(element, text, speed = 100) {
 window.addEventListener('load', () => {
     const titleElement = document.querySelector('.hero-section h1 .text-primary');
     if (titleElement) {
-        const originalText = titleElement.textContent;
+        const originalText = titleElement.innerText;
         typeWriter(titleElement, originalText, 150);
     }
 });
@@ -85,18 +85,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
     const body = document.body;
-    
+
     // Verificar tema salvo
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
         themeIcon.className = 'fas fa-sun';
     }
-    
+
     // Alternar tema
     themeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
-        
+
         if (body.classList.contains('dark-mode')) {
             themeIcon.className = 'fas fa-sun';
             localStorage.setItem('theme', 'dark');
